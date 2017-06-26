@@ -1,7 +1,7 @@
 import numpy as np
 from symnome.base_genome import BaseGenome
 
-class SampledGenome(BaseGenome):
+class RandomlySampledGenome(BaseGenome):
     '''
         A simulation of one difficulty in genome sequencing: repeated reads from
         the true genome. Here, a true base genome is constructed and several reads
@@ -14,9 +14,9 @@ class SampledGenome(BaseGenome):
 
     def __init__(self, length=500, read_size=200, n_reads=16):
         '''
-            n_reads (int): the maximum size of any individual repeated read
-
+            length (int): the legnth of the base genome
             read_size (int): the minimum size of any individual repeated read
+            n_reads (int): the maximum size of any individual repeated read
         '''
         super().__init__(length=length)
 

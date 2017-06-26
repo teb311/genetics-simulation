@@ -1,10 +1,10 @@
-from symnome.sampled_genome import SampledGenome
+from symnome.randomly_sampled_genome import RandomlySampledGenome
 
 def test_reads():
     for length in [1000, 2000, 3000]:
         for n_reads in [10, 30]:
             for read_size in [200, 500]:
-                sg = SampledGenome(length=length, n_reads=n_reads, read_size=read_size)
+                sg = RandomlySampledGenome(length=length, n_reads=n_reads, read_size=read_size)
 
                 base_genome = sg.true_genome()
                 read_count = 0
